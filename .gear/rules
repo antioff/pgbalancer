@@ -1,0 +1,3 @@
+tar: v@version@:pgbalancer
+diff: v@version@:pgbalancer pgbalancer
+
