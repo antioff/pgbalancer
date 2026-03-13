@@ -1755,7 +1755,7 @@ rest_get(const char *url, RestResponse *response)
     }
     
     curl_easy_setopt(curl_handle, CURLOPT_URL, url);
-    curl_easy_setopt(curl_handle, CURLOPT_WRITEFUNCTION, write_callback);
+    curl_easy_setopt(curl_handle, CURLOPT_WRITEFUNCTION,(void *)write_callback);
     curl_easy_setopt(curl_handle, CURLOPT_WRITEDATA, response);
     curl_easy_setopt(curl_handle, CURLOPT_TIMEOUT, 30L);
     
