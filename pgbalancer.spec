@@ -87,6 +87,8 @@ mkdir -p %buildroot{%_sysconfdir/%sname,%_logdir/%sname,%_runtimedir/%sname,%_li
 find "src" -name "*.a" -exec cp -v {} "%buildroot%_libdir/%sname/" \;
 cp -Rf %buildroot/usr/etc/* %buildroot%_sysconfdir/%sname/
 install -m 644 src/sample/pgbalancer.conf.sample %{buildroot}/etc/pgbalancer/pgbalancer.conf.sample
+cp bctl/bctl %{buildroot}%_bindir/
+
 
 %files
 %doc README.md
